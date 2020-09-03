@@ -1,5 +1,10 @@
 package uc
 
+import (
+
+    "fmt"
+    "strconv"
+)
 
 func Add(a ...interface{}) interface{} {
 
@@ -23,7 +28,7 @@ func Add(a ...interface{}) interface{} {
                 }
             }
 
-        case float64:
+        case float64 :
 
             if _, ok := v.(float64); ok {
 
@@ -31,7 +36,7 @@ func Add(a ...interface{}) interface{} {
 
                 if len(a) == index +1 {
 
-                    return sumFloat64
+                    return parseFloat(sumFloat64)
                 }
             }
 
@@ -44,3 +49,13 @@ func Add(a ...interface{}) interface{} {
     return 0
 }
 
+func parseFloat(f float64) float64 {
+
+
+    str := fmt.Sprintf("%.1f", f)
+
+    sumFloat64, _ := strconv.ParseFloat(str, 64)
+
+	return sumFloat64
+
+}
