@@ -34,7 +34,7 @@ func Add(a ...interface{}) interface{} {
 
                 sumFloat64 += v.(float64)
 
-                if len(a) == index +1 {
+                if len(a) == index + 1 {
 
                     return parseFloat(sumFloat64)
                 }
@@ -54,8 +54,8 @@ func parseFloat(f float64) float64 {
 
     str := fmt.Sprintf("%.2f", f)
 
-    sumFloat64, _ := strconv.ParseFloat(str, 64)
+    sumFloat, _ := strconv.ParseFloat(str, 64)
 
-	return sumFloat64
+	return sumFloat
 
 }
