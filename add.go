@@ -59,3 +59,8 @@ func parseFloat(f float64) float64 {
 	return sumFloat
 
 }
+
+func HelloWorld() {
+
+    fmt.Println("HelloWorld")
+}
