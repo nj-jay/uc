@@ -52,7 +52,7 @@ func Add(a ...interface{}) interface{} {
 func parseFloat(f float64) float64 {
 
 
-    str := fmt.Sprintf("%.1f", f)
+    str := fmt.Sprintf("%.2f", f)
 
     sumFloat64, _ := strconv.ParseFloat(str, 64)
 
