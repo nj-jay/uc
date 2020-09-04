@@ -13,17 +13,11 @@ func TestAdd(t *testing.T) {
 		t.Error("Add(1, 2) must be 3")
 	}
 
-<<<<<<< HEAD
     if Add(1.1, 2.2) != 3.3 {
 
        t.Error("Add(1.1, 2.2) must be 3.3")
 
     }
-=======
-	if Add(1.1, 2.2) != 3.3 {
-	
-		t.Error("Add(1.1, 2.2) must be 3.3")
-	}
 	
 	if Add("hello", "world") != "helloworld" {
 	
@@ -31,8 +25,6 @@ func TestAdd(t *testing.T) {
 		
 	}
 	
-
->>>>>>> test
 }
 
 
