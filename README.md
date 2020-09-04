@@ -19,9 +19,36 @@ add([]float32{1.1, 2.2}, []float32{3.3, 4.4}) = []float32{1.1, 2.2, 3.3, 4.3}
 
 ## How-to-Use
 
-go get -u github.com/nj-jay/uc
+go get -u github.com/nj-jay/uc@v0.0.2
 
+## example
 
+```go
+package main
+
+import (
+
+	"fmt"
+
+	"github.com/nj-jay/uc"
+
+)
+
+func main(){
+
+    fmt.Println(uc.Add(1, 2))
+	fmt.Println(uc.Add(1.1, 2.2))
+    fmt.Println(uc.Add("I", " ", "love", " ", "go!"))
+
+}
+
+```
+
+运行结果:
+
+3
+3.3
+1 love go!
 ## 已完成
 
 - [x] Add --int float64 string完成
