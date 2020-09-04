@@ -4,6 +4,6 @@ go 1.14
 
 require (
 
-    github.com/nj-jay/uc v0.0.1
+    github.com/nj-jay/uc latest
 
 )
