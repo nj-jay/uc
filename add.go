@@ -1,87 +1,80 @@
 package uc
 
 import (
+	"fmt"
 
-    "fmt"
-
-    "strconv"
+	"strconv"
 )
 
 var (
-
 	sumInt int
 
-    sumFloat64 float64
-    
-    sumString string
-    
+	sumFloat64 float64
+
+	sumString string
 )
 
 func Add(a ...interface{}) interface{} {
 
-    for index, v := range a {
+	for index, v := range a {
 
-        switch v.(type) {
+		switch v.(type) {
 
-        case int:
+		case int:
 
-            if _, ok := v.(int); ok {
+			if _, ok := v.(int); ok {
 
-                sumInt += v.(int)
+				sumInt += v.(int)
 
-                if len(a) == index+1 {
+				if len(a) == index+1 {
 
-                    return sumInt
-                }
-            }
-
-        case float64 :
-
-            if _, ok := v.(float64); ok {
-
-                sumFloat64 += v.(float64)
-
-                if len(a) == index + 1 {
-
-                    return parseFloat(sumFloat64)
-                    
-                }
-            }
-	
-		case string :
-
-			if _, ok := v.(string); ok {
-			
-				sumString += v.(string)
-				
-				if len(a) == index + 1 {
-				
-					return sumString
-					
+					return sumInt
 				}
 			}
 
-        default:
+		case float64:
 
-            return nil
+			if _, ok := v.(float64); ok {
 
-        }
-    }
-    
-    return 0
+				sumFloat64 += v.(float64)
+
+				if len(a) == index+1 {
+
+					return parseFloat(sumFloat64)
+
+				}
+			}
+
+		case string:
+
+			if _, ok := v.(string); ok {
+
+				sumString += v.(string)
+
+				if len(a) == index+1 {
+
+					return sumString
+
+				}
+			}
+
+		default:
+
+			return nil
+
+		}
+	}
+
+	return 0
 }
 
 func parseFloat(f float64) float64 {
 
-    str := fmt.Sprintf("%.2f", f)
+	str := fmt.Sprintf("%.2f", f)
 
-    sumFloat, _ := strconv.ParseFloat(str, 64)
+	sumFloat, _ := strconv.ParseFloat(str, 64)
 
 	return sumFloat
 
 }
 
-func HelloWorld() {
-
-    fmt.Println("HelloWorld")
-}
