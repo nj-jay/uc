@@ -12,7 +12,7 @@ add(1, 2) = 3
 add(1.1, 2.2) = 3.3
 add("hello", "world") = "hello world"
 add([]int{1, 2}, []int{4, 5, 6}) = []int{1, 2, 4, 5, 6}
-add([]float32{1.1, 2.2}, float[32]{3.3, 4.4}) = float32{1.1, 2.2, 3.3, 4.3}
+add([]float32{1.1, 2.2}, []float32{3.3, 4.4}) = []float32{1.1, 2.2, 3.3, 4.3}
 
 //后续需要用到哪些再进行补充
 ```
@@ -24,7 +24,7 @@ go get -u github.com/nj-jay/uc
 
 ## 已完成
 
-- [x] Add --整数以及float64部分
+- [x] Add --int float64 string完成
 
 
 
