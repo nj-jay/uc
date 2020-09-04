@@ -3,14 +3,21 @@ package uc
 import (
 
     "fmt"
+
     "strconv"
 )
 
+var (
+
+	sumInt int
+
+    sumFloat64 float64
+    
+    sumString string
+    
+)
+
 func Add(a ...interface{}) interface{} {
-
-    var sumInt int
-
-    var sumFloat64 float64
 
     for index, v := range a {
 
@@ -34,11 +41,25 @@ func Add(a ...interface{}) interface{} {
 
                 sumFloat64 += v.(float64)
 
-                if len(a) == index +1 {
+                if len(a) == index + 1 {
 
                     return parseFloat(sumFloat64)
+                    
                 }
             }
+	
+		case string :
+
+			if _, ok := v.(string); ok {
+			
+				sumString += v.(string)
+				
+				if len(a) == index + 1 {
+				
+					return sumString
+					
+				}
+			}
 
         default:
 
@@ -46,11 +67,11 @@ func Add(a ...interface{}) interface{} {
 
         }
     }
+    
     return 0
 }
 
 func parseFloat(f float64) float64 {
-
 
     str := fmt.Sprintf("%.1f", f)
 
