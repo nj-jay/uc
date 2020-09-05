@@ -13,6 +13,8 @@ func main(){
     fmt.Println(uc.Add(1, 2, 3))
     fmt.Println(uc.Add(1, 2))
 	fmt.Println(uc.Add(1.1, 2.2))
+    fmt.Println(uc.Add(2.22, 3.33))
     fmt.Println(uc.Add("I", " ", "love", " ", "go!"))
+    fmt.Println(uc.Add("https://", "nj-jay.com"))
     fmt.Println(uc.Add([]int{1, 2}, []int{3, 4}))
 }

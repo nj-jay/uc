@@ -21,6 +21,8 @@ func Add(a ...interface{}) interface{} {
 	    sumFloat64 float64 = 0.0
 
 	    sumString string = ""
+
+        sumSliceInt []int
     )
 
 	for index, v := range a {
@@ -90,6 +92,19 @@ func Add(a ...interface{}) interface{} {
 
 				}
 			}
+
+        case []int :
+
+            if _, ok := v.([]int); ok {
+
+                sumSliceInt = append(sumSliceInt, v.([]int)...)
+
+                if len(a) == index + 1 {
+
+                    return sumSliceInt
+                }
+
+            }
 
 		default:
 
