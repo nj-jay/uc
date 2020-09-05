@@ -23,36 +23,54 @@ go get -u github.com/nj-jay/uc@v0.0.7
 
 ## example
 
-```go
+```
 package main
 
 import (
 
-	"fmt"
+    "fmt"
 
-	"github.com/nj-jay/uc"
-
+    "github.com/nj-jay/uc"
 )
+func main() {
 
-func main(){
-
+    var a int32
+    var b int64
+    a = 5
+    b = 4
+    fmt.Println(uc.Add(a, a))
+    fmt.Println(uc.Add(b, b))
+    fmt.Println(uc.Add(1, 2, 3))
     fmt.Println(uc.Add(1, 2))
-
     fmt.Println(uc.Add(1.1, 2.2))
-
+    fmt.Println(uc.Add(2.22, 3.33))
     fmt.Println(uc.Add("I", " ", "love", " ", "go!"))
-
+    fmt.Println(uc.Add("https://", "nj-jay.com"))
+    fmt.Println(uc.Add([]int{1, 2}, []int{3, 4}))
+ 
 }
 
 ```
 
 运行结果:
 
+10
+
+8
+
+6
+
 3
 
 3.3
 
-1 love go!
+5.55
+
+I love go!
+
+https://nj-jay.com
+
+[1 2 3 4]
 
 ## 已完成
 
