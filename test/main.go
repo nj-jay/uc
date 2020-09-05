@@ -4,26 +4,14 @@ import (
 
 	"fmt"
 
-	"strconv"
+	"github.com/nj-jay/uc"
+
 )
 
-func main() {
+func main(){
 
-	fmt.Println(Sum())
-
-}
-
-func Sum() float64 {
-
-	sum := 1.1 + 2.22
-
-	var str string
-
-	var sumFloat64 float64
-
-	str = fmt.Sprintf("%.2f", sum)
-
-	sumFloat64, _ = strconv.ParseFloat(str, 64)
-
-	return sumFloat64
+    fmt.Println(uc.Add(1, 2))
+	fmt.Println(uc.Add(1.1, 2.2))
+    fmt.Println(uc.Add("I", " ", "love", " ", "go!"))
+    fmt.Println(uc.Add([]int{1, 2}, []int{3, 4}))
 }
