@@ -56,7 +56,7 @@ func main(){
 ## 已完成
 
 - [x] Add --int float64 string完成
-- [x] Add --[]int32完成
+- [x] Add --[]int完成
 
 
 
