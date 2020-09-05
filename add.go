@@ -7,73 +7,72 @@ import (
 	"strconv"
 )
 
-
 func Add(a ...interface{}) interface{} {
 
-    var (
+	var (
 
-	    sumInt int = 0
+		sumInt int = 0
 
-        sumInt32 int32 = 0.0
+		sumInt32 int32 = 0.0
 
-        sumInt64 int64 = 0
+		sumInt64 int64 = 0
 
-	    sumFloat64 float64 = 0.0
+		sumFloat64 float64 = 0.0
 
-	    sumString string = ""
+		sumString string = ""
 
-        sumSliceInt []int
-    )
+		sumSliceInt []int
+	)
 
 	for index, v := range a {
 
 		switch v.(type) {
 
-		case int :
+		case int:
 
 			if _, ok := v.(int); ok {
 
 				sumInt += v.(int)
 
-				if len(a) == index + 1 {
+				if len(a) == index+1 {
 
 					return sumInt
 				}
 			}
 
-        case int64 :
+		case int64:
 
-            if _, ok := v.(int64); ok {
-                
-                sumInt64 += v.(int64)
+			if _, ok := v.(int64); ok {
 
-                if len(a) == index + 1 {
+				sumInt64 += v.(int64)
 
-                    return sumInt64
+				if len(a) == index+1 {
 
-                }
-            }
+					return sumInt64
 
-        case int32 :
+				}
+			}
 
-            if _, ok := v.(int32); ok {
+		case int32:
 
-                sumInt32 += v.(int32)
+			if _, ok := v.(int32); ok {
 
-                if len(a) == index + 1 {
+				sumInt32 += v.(int32)
 
-                    return sumInt32
+				if len(a) == index+1 {
 
-                }
-            }                
+					return sumInt32
 
-        case float64:
+				}
+			}
+
+		case float64:
 
 			if _, ok := v.(float64); ok {
 
 				sumFloat64 += v.(float64)
 
-				if len(a) == index + 1 {
+				if len(a) == index+1 {
 
 					return parseFloat64(sumFloat64)
 
@@ -86,30 +85,29 @@ func Add(a ...interface{}) interface{} {
 
 				sumString += v.(string)
 
-				if len(a) == index+1 {
+				if len(a) == index + 1 {
 
 					return sumString
 
 				}
 			}
 
-        case []int :
+		case []int:
 
-            if _, ok := v.([]int); ok {
+			if _, ok := v.([]int); ok {
 
-                sumSliceInt = append(sumSliceInt, v.([]int)...)
+				sumSliceInt = append(sumSliceInt, v.([]int)...)
 
-                if len(a) == index + 1 {
+				if len(a) == index + 1 {
 
-                    return sumSliceInt
-                }
+					return sumSliceInt
+				}
 
-            }
+			}
 
 		default:
 
 			return nil
-
 		}
 	}
 
