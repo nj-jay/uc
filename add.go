@@ -12,15 +12,15 @@ func Add(a ...interface{}) interface{} {
 
     var (
 
-	    sumInt int
+	    sumInt int = 0
 
-        sumInt32 int32
+        sumInt32 int32 = 0.0
 
-        sumInt64 int64
+        sumInt64 int64 = 0
 
-	    sumFloat64 float64
+	    sumFloat64 float64 = 0.0
 
-	    sumString string
+	    sumString string = ""
     )
 
 	for index, v := range a {
