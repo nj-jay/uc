@@ -7,20 +7,21 @@ import (
 	"strconv"
 )
 
-var (
-
-	sumInt int
-
-    sumInt32 int32
-
-    sumInt64 int64
-
-	sumFloat64 float64
-
-	sumString string
-)
 
 func Add(a ...interface{}) interface{} {
+
+    var (
+
+	    sumInt int
+
+        sumInt32 int32
+
+        sumInt64 int64
+
+	    sumFloat64 float64
+
+	    sumString string
+    )
 
 	for index, v := range a {
 
