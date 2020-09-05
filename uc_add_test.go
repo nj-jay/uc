@@ -7,25 +7,44 @@ import (
 
 func TestAdd(t *testing.T) {
 
+    var a float64
 
-	if Add(1, 2) != 3 {
+    var b int32
+    
+    var c int32
 
-		t.Error("Add(1, 2) must be 3")
+    var d int64
+
+    var e int64
+
+    a  =1.1
+
+    b = 3
+
+    c = 6
+
+    d = 2
+
+    e = 4
+
+	if Add(b, b) != c {
+
+		t.Error("Add(3, 3) must be 6")
 	}
 
-    if Add(1.1, 2.2) != 3.3 {
+    if Add(d, d) != e {
 
-       t.Error("Add(1.1, 2.2) must be 3.3")
+        t.Error("Add(2, 2) must be 4")
+    } 
 
+    if Add(a, a) != 2.2 {
+
+       t.Error("Add(1.1, 1.1) must be 2.2")
     }
 	
 	if Add("hello", "world") != "helloworld" {
 	
-		t.Error("must be helloworld")	
-		
+		t.Error("must be helloworld")			
 	}
 	
 }
-
-
-

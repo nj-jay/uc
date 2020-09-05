@@ -1,13 +1,19 @@
 package uc
 
 import (
+
 	"fmt"
 
 	"strconv"
 )
 
 var (
+
 	sumInt int
+
+    sumInt32 int32
+
+    sumInt64 int64
 
 	sumFloat64 float64
 
@@ -20,27 +26,53 @@ func Add(a ...interface{}) interface{} {
 
 		switch v.(type) {
 
-		case int:
+		case int :
 
 			if _, ok := v.(int); ok {
 
 				sumInt += v.(int)
 
-				if len(a) == index+1 {
+				if len(a) == index + 1 {
 
 					return sumInt
 				}
 			}
 
-		case float64:
+        case int64 :
+
+            if _, ok := v.(int64); ok {
+                
+                sumInt64 += v.(int64)
+
+                if len(a) == index + 1 {
+
+                    return sumInt64
+
+                }
+            }
+
+        case int32 :
+
+            if _, ok := v.(int32); ok {
+
+                sumInt32 += v.(int32)
+
+                if len(a) == index + 1 {
+
+                    return sumInt32
+
+                }
+            }                
+
+        case float64:
 
 			if _, ok := v.(float64); ok {
 
 				sumFloat64 += v.(float64)
 
-				if len(a) == index+1 {
+				if len(a) == index + 1 {
 
-					return parseFloat(sumFloat64)
+					return parseFloat64(sumFloat64)
 
 				}
 			}
@@ -68,7 +100,7 @@ func Add(a ...interface{}) interface{} {
 	return 0
 }
 
-func parseFloat(f float64) float64 {
+func parseFloat64(f float64) float64 {
 
 	str := fmt.Sprintf("%.2f", f)
 
@@ -77,4 +109,3 @@ func parseFloat(f float64) float64 {
 	return sumFloat
 
 }
-
