@@ -10,9 +10,12 @@ import (
 
 func main(){
 
-    err := uc.Play("./七里香.mp3")
+    err := uc.Play("以父之名-周杰伦.mp3")
+
     if err != nil {
+
         fmt.Println(err)
     }
+
 }
 
