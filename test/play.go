@@ -3,12 +3,16 @@ package main
 
 import (
 
+    "fmt"
     "github.com/nj-jay/uc"
 
 )
 
 func main(){
 
-    uc.Play("七里香.mp3")
+    err := uc.Play("./七里香.mp3")
+    if err != nil {
+        fmt.Println(err)
+    }
 }
 

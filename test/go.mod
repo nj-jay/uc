@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/hajimehoshi/oto v0.6.4 // indirect
-	github.com/nj-jay/uc v0.0.9 // indirect
+	github.com/nj-jay/uc v0.1.0 // indirect
 	github.com/qiniu/audio v0.1.3 // indirect
 	github.com/qiniu/x v1.11.5 // indirect
 	golang.org/x/exp v0.0.0-20200901203048-c4f52b2c50aa // indirect
