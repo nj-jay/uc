@@ -10,7 +10,7 @@ import (
 
 func main(){
 
-    err := uc.Play("以父之名-周杰伦.mp3")
+    err := uc.PlayAudio("以父之名-周杰伦.mp3")
 
     if err != nil {
 
