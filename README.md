@@ -77,3 +77,8 @@ https://nj-jay.com
 - [x] Add --int float64 string完成
 - [x] Add --[]int完成
 - [x] Add --int64 int32完成
+
+## Contributors
+
+[nj-jay](https://github.com/nj-jay)
+[xmoon5](https://github.com/xmoon5)
