@@ -21,4 +21,6 @@ func main() {
 	fmt.Println(uc.Add("I", " ", "love", " ", "go!"))
 	fmt.Println(uc.Add("https://", "nj-jay.com"))
 	fmt.Println(uc.Add([]int{1, 2}, []int{3, 4}))
+    fmt.Printf("%T\n", uc.Add([]int{5, 6}, []int{7, 8}))
+
 }
