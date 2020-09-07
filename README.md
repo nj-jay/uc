@@ -19,11 +19,11 @@ add([]float32{1.1, 2.2}, []float32{3.3, 4.4}) = []float32{1.1, 2.2, 3.3, 4.3}
 
 ## How-to-Use
 
-go get -u github.com/nj-jay/uc@v0.1.3
+go get -u github.com/nj-jay/uc@v0.1.4
 
 相比v0.0.7　增加的功能为
 
-uc.Play("xx.mp3")可以播放音乐
+cal.Play("xx.mp3")可以播放音乐
 
 ## example
 
@@ -34,7 +34,7 @@ import (
 
     "fmt"
 
-    "github.com/nj-jay/uc"
+    "github.com/nj-jay/uc/cal"
 )
 func main() {
 
@@ -42,15 +42,15 @@ func main() {
     var b int64
     a = 5
     b = 4
-    fmt.Println(uc.Add(a, a))
-    fmt.Println(uc.Add(b, b))
-    fmt.Println(uc.Add(1, 2, 3))
-    fmt.Println(uc.Add(1, 2))
-    fmt.Println(uc.Add(1.1, 2.2))
-    fmt.Println(uc.Add(2.22, 3.33))
-    fmt.Println(uc.Add("I", " ", "love", " ", "go!"))
-    fmt.Println(uc.Add("https://", "nj-jay.com"))
-    fmt.Println(uc.Add([]int{1, 2}, []int{3, 4}))
+    fmt.Println(cal.Add(a, a))
+    fmt.Println(cal.Add(b, b))
+    fmt.Println(cal.Add(1, 2, 3))
+    fmt.Println(cal.Add(1, 2))
+    fmt.Println(cal.Add(1.1, 2.2))
+    fmt.Println(cal.Add(2.22, 3.33))
+    fmt.Println(cal.Add("I", " ", "love", " ", "go!"))
+    fmt.Println(cal.Add("https://", "nj-jay.com"))
+    fmt.Println(cal.Add([]int{1, 2}, []int{3, 4}))
  
 }
 
@@ -81,6 +81,7 @@ https://nj-jay.com
 - [x] Add --int float64 string完成
 - [x] Add --[]int完成
 - [x] Add --int64 int32完成
+- [x] PlayAudio() 实现播放音乐
 
 ## Contributors
 
