@@ -75,7 +75,7 @@ go get -u github.com/nj-jay/uc@v1.0.0
   >   import (
   >   
   >       "fmt"
-  >       "github.com/nj-jay/uc/cal"
+  >       "github.com/nj-jay/uc/play"
   >   )
   >   
   >   func main() {
