@@ -19,7 +19,11 @@ add([]float32{1.1, 2.2}, []float32{3.3, 4.4}) = []float32{1.1, 2.2, 3.3, 4.3}
 
 ## How-to-Use
 
-go get -u github.com/nj-jay/uc@v0.0.7
+go get -u github.com/nj-jay/uc@v0.1.3
+
+相比v0.0.7　增加的功能为
+
+uc.Play("xx.mp3")可以播放音乐
 
 ## example
 
