@@ -26,7 +26,7 @@ func Wget(url string) {
 
 		os.Exit(0)
 
-	} else {
+	} else if res.StatusCode == 200 {
 
 		fmt.Println(res.Status)
 
