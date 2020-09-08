@@ -90,6 +90,32 @@ go get -u github.com/nj-jay/uc@v1.0.0
 * cal.Add()
 * play.PlayAudio()
 
+## 正在开发的功能
+
+* shell库
+
+    > shell.Wget(url string) 可以下载网络上的文件
+    >
+    > ```go
+    > package main
+    > import (
+    > 	"github.com/nj-jay/uc/shell"
+    > )
+    > 
+    > func main() {
+    >     shell.Wget("https://pucture.nj-jay.com/1.png")
+    > }
+    > //运行结果
+    > 2020/09/08 15:54:19 https://picture.nj-jay.com/1.png
+    > 已发出HTTP/2.0请求, 正在等待回应...200 OK
+    > 长度:	 [ 2673 byte ] >-- 2.61 Kb 	[ image/png ]
+    > 正在保存至: 1.png
+    > 2020/09/08 15:54:19 已保存 1.png
+    > ```
+    >
+    > 
+
+
 ## Contributors
 
 [nj-jay](https://github.com/nj-jay)
