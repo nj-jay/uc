@@ -103,7 +103,7 @@ go get -u github.com/nj-jay/uc@v1.0.0
     > )
     > 
     > func main() {
-    >     shell.Wget("https://pucture.nj-jay.com/1.png")
+    >  shell.Wget("https://pucture.nj-jay.com/1.png")
     > }
     > //运行结果
     > 2020/09/08 15:54:19 https://picture.nj-jay.com/1.png
@@ -113,7 +113,43 @@ go get -u github.com/nj-jay/uc@v1.0.0
     > 2020/09/08 15:54:19 已保存 1.png
     > ```
     >
+    > shell.Ls(path string) 致敬ls命令
+    >
+    > ```go
+    > package main
+    > import (
+    > 	"github.com/nj-jay/uc/shell"
+    > )
     > 
+    > func main() {
+    >     if len(os.Args) == 1 {
+    > 		shell.Ls(".")
+    > 	} else {
+    > 		path := os.Args[1]
+    > 		shell.Ls(path)
+    > 	}
+    > }
+    > // 编译成二进制文件ls-go
+    > //运行结果 
+    > LICENSE   0.1 Kb
+    > README.md   2.5 Kb
+    > cal
+    > example
+    > go.mod   0.1 Kb
+    > go.sum   1.1 Kb
+    > play
+    > shell
+    > // ls-go ../
+    > Somusic
+    > book
+    > calcugo
+    > cgo
+    > faker
+    > file
+    > fileUpload
+    > fyne
+    > gif
+    > ```
 
 
 ## Contributors

@@ -3,11 +3,13 @@ package shell
 import (
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"strconv"
 	"strings"
+    "github.com/fatih/color"
 )
 
 func Wget(url string) {
@@ -37,9 +39,9 @@ func Wget(url string) {
 
 		length := res.Header.Get("Content-Length")
 
-		length_kb, _ := strconv.ParseFloat(length, 64)
+		lengthKb, _ := strconv.ParseFloat(length, 64)
 
-		fmt.Println("长度:	", "[", length, "byte", "]", ">--", fmt.Sprintf("%.2f", length_kb/1024), "Kb", "	[", res.Header.Get("Content-Type"), "]")
+		fmt.Println("长度:	", "[", length, "byte", "]", ">--", fmt.Sprintf("%.2f", lengthKb/1024), "Kb", "	[", res.Header.Get("Content-Type"), "]")
 
 		fmt.Println("正在保存至:", url[index+1:])
 
@@ -50,6 +52,40 @@ func Wget(url string) {
 
 		//关闭连接
 		_ = res.Close
+
+	}
+}
+
+func Ls(path string) {
+
+	info, err := ioutil.ReadDir(path)
+
+	if err != nil {
+
+		fmt.Println("no this dictionary")
+
+		os.Exit(0)
+	}
+
+	for _, f := range info {
+
+		length := f.Size()
+
+		if ok := f.IsDir(); ok {
+
+			color.Blue("%s", f.Name())
+
+		} else {
+
+			if length > 1024*1024 {
+
+				fmt.Println(f.Name(), " ", fmt.Sprintf("%.2f", float64(length)/(1024*1024)), "Mb")
+
+			} else {
+
+				fmt.Println(f.Name(), " ", fmt.Sprintf("%.1f", float64(length)/1024), "Kb")
+			}
+		}
 
 	}
 }

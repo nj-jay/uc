@@ -3,6 +3,7 @@ module github.com/nj-jay/uc/test
 go 1.14
 
 require (
+	github.com/fatih/color v1.9.0 // indirect
 	github.com/hajimehoshi/go-mp3 v0.3.1 // indirect
 	github.com/hajimehoshi/oto v0.6.4 // indirect
 	github.com/nj-jay/uc v1.0.0
