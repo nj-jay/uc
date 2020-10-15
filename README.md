@@ -2,7 +2,7 @@
 
 ## How-to-Use
 
-go get -u github.com/nj-jay/uc@v1.0.0
+go get -u github.com/nj-jay/uc@v1.0.1
 
 ## Function
 
@@ -85,16 +85,9 @@ go get -u github.com/nj-jay/uc@v1.0.0
   >   播放音乐，音乐播放完退出程序
   >   ```
 
-## 已完成
-
-* cal.Add()
-* play.PlayAudio()
-
-## 正在开发的功能
-
 * shell库
 
-    > shell.Wget(url string) 可以下载网络上的文件
+    > shell.Wget(url string) 可以下载网络上的文件 致敬wget命令
     >
     > ```go
     > package main
@@ -103,14 +96,15 @@ go get -u github.com/nj-jay/uc@v1.0.0
     > )
     > 
     > func main() {
-    >  shell.Wget("https://pucture.nj-jay.com/1.png")
+    > shell.Wget("https://pucture.nj-jay.com/node.tar.xz")
     > }
     > //运行结果
-    > 2020/09/08 15:54:19 https://picture.nj-jay.com/1.png
+    > 2020/10/15 23:37:39 https://picture.nj-jay.com/node.tar.xz
     > 已发出HTTP/2.0请求, 正在等待回应...200 OK
-    > 长度:	 [ 2673 byte ] >-- 2.61 Kb 	[ image/png ]
-    > 正在保存至: 1.png
-    > 2020/09/08 15:54:19 已保存 1.png
+    > 长度:	 [ 14781396 byte ] >-- 14434.96 Kb 	[ application/x-xz ]
+    > 正在保存至: node.tar.xz
+    >  14.78 MB / 14.78 MB [====================================] 100.00% 5.81 MB/s 2s
+    > 2020/10/15 23:37:43 已保存 node.tar.xz
     > ```
     >
     > shell.Ls(path string) 致敬ls命令
@@ -122,7 +116,7 @@ go get -u github.com/nj-jay/uc@v1.0.0
     > )
     > 
     > func main() {
-    >     if len(os.Args) == 1 {
+    >  if len(os.Args) == 1 {
     > 		shell.Ls(".")
     > 	} else {
     > 		path := os.Args[1]
@@ -150,6 +144,18 @@ go get -u github.com/nj-jay/uc@v1.0.0
     > fyne
     > gif
     > ```
+
+
+
+## 已完成
+
+* cal.Add()
+* play.PlayAudio()
+* shell.Wget()
+* shell.Ls()
+
+## 正在开发的功能
+
 
 
 ## Contributors

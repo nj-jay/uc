@@ -2,10 +2,12 @@ package main
 
 import (
     "github.com/nj-jay/uc/shell"
+    "os"
 )
 
 func main(){
-
-    shell.Wget("https://picture.nj-jay.com/1.png")
+    
+    url := os.Args[1]
+    shell.Wget(url)
 }
 
