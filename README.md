@@ -2,7 +2,7 @@
 
 ## How-to-Use
 
-go get -u github.com/nj-jay/uc@v1.0.1
+go get -u github.com/nj-jay/uc@v2
 
 ## Function
 
