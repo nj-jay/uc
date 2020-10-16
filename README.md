@@ -3,7 +3,9 @@
 ## How-to-Use
 
 
-go get -u github.com/nj-jay/uc@v2.0.0
+处于开发阶段
+
+敬请期待
 
 ## Function
 
