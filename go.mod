@@ -11,6 +11,3 @@ require (
 	gopkg.in/cheggaaa/pb.v1 v1.0.28 // indirect
 )
 
-replace (
-    github.com/nj-jay/uc => github.com/nj-jay/uc v1.0.2
-)
